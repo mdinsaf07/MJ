@@ -1,0 +1,262 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="./build/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body class="text-white font-oswald bg-black">
+    <header class="bg-black w-full relative w-full">
+
+        <nav class="h-10 md:h-14 w-full bg-black absolute bg-opacity-20 z-10">
+            <h1 class="text-2xl md:text-3xl mt-1 ml-3 text-red-all float-left lg:mt-2">Movie<span
+                    class="text-white">Junkie</span></h1>
+
+            <div class="inline-block float-right mr-5 mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:h-8 lg:w-9 cursor-pointer inline-block lg:hidden"
+                    id="menu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <ul class="hidden block bg-black  bg-opacity-20 rounded transform transition duration-75 absolute right-6 top-12 text-center cursor-pointer"
+                    id="dropdown-content">
+                    <li class="py-1 px-5 hover:bg-red-600 hover:bg-opacity-10">Home</li>
+                    <li class="py-1 px-5 hover:bg-red-600 hover:bg-opacity-10">About</li>
+                    <li class="py-1 px-5 hover:bg-red-600 hover:bg-opacity-10">FAQ's</li>
+                </ul>
+            </div>
+            <form class="inline-block float-right mt-2.5" id="searchBar">
+                <input type="text" placeholder="Search movie" class="h-8 bg-black bg-opacity-50 pl-3 py-2" >
+            </form>
+            <div class="float-right mt-2.5 mr-3 lg:mr-5 lg:mt-3">
+                <a href="#"
+                    class="px-5 py-1 bg-red-600 text-xs filter drop-shadow-lg lg:mr-3 inline-block lg:text-base hover:bg-red-700 transform transition hover:-translate-y-0.5">Login</a>
+            </div>
+
+        </nav>
+
+
+        <!--Bootstrap carousel-->
+        
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div>
+                        <video src="./images/video1.mp4" autoplay muted loop class="object-fill h-96 md:h-auto w-full"></video>
+                    </div>
+                    <div class="w-2/3 absolute top-48 md:top-32 xl:top-52 left-8 border-l-2">
+                        <p class="text-xs ml-3 font-extralight lg:text-2xl">Out Now</p>
+                        <h1 class="ml-3 lg:text-4xl">Dhuruvangal Pathinaaru</h1>
+                        <p class="text-xs ml-3 filter drop-shadow-lg sm:w-1/2 lg:text-2xl">A couple dies under mysterious
+                            circumstances and
+                            Inspector Deepak is assigned the case.
+                            However, he loses his leg in a confrontation during
+                            the investigation, which leads to the end of his career.</p>
+                        <a href="./moviepage.html"
+                            class="px-5 py-1 bg-red-600 text-xs absolute mt-2.5 filter drop-shadow-lg ml-3 lg:text-base hover:bg-red-700 transform transition hover:-translate-y-0.5">Book</a>
+                    </div>
+                  </div>
+              <div class="carousel-item">
+                <div>
+                    <video src="./images/video1.mp4" autoplay muted loop class="object-fill h-96 md:h-auto w-full"></video>
+                </div>
+                <div class="w-2/3 absolute top-48 md:top-32 xl:top-52 left-8 border-l-2">
+                    <p class="text-xs ml-3 font-extralight lg:text-2xl">Out Now</p>
+                    <h1 class="ml-3 lg:text-4xl">Dhuruvangal Pathinaaru</h1>
+                    <p class="text-xs ml-3 filter drop-shadow-lg sm:w-1/2 lg:text-2xl">A couple dies under mysterious
+                        circumstances and
+                        Inspector Deepak is assigned the case.
+                        However, he loses his leg in a confrontation during
+                        the investigation, which leads to the end of his career.</p>
+                    <a href="./moviepage.html"
+                        class="px-5 py-1 bg-red-600 text-xs absolute mt-2.5 filter drop-shadow-lg ml-3 lg:text-base hover:bg-red-700 transform transition hover:-translate-y-0.5">Book</a>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon mr-48" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon ml-48" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+
+<!--Bootstrap carousel ends-->
+
+
+
+
+
+
+
+        
+
+    </header>
+
+    <main class="py-10 w-full">
+        <section class="relative">
+            <h1 class="ml-5 lg:text-2xl" id="heading">Recent releases</h1>
+
+            <!--Movie Container Begins-->
+            <div id="movieContainer" class="flex flex-wrap space-x-5 justify-center">
+                <div class="py-10">
+                    <img src="" alt="Movie image"
+                        class="border cursor-pointer border-black hover:border-white h-56 object-cover lg:w-full lg:h-96 rounded shadow-inner transform transition hover:-translate-y-1">
+                    <p class="mt-1 lg:text-xl lg:mt-2 w-40" id="movie-name"></p>
+                </div>
+            </div>
+            <!--Movie Contaianer ends-->
+
+            <!--Modal begins-->
+            <div class="hidden bg-opacity-10 h-5/6 bg-black  w-1/2 fixed top-14 left-80 transform translate-x-4 overflow-y-auto"
+                id="modalbox">
+
+                <div>
+                    <img src="./images/kaithiheader2.jpg" class="object-cover md:object-fill h-96 md:h-auto w-full">
+                </div>
+                <div class="w-2/3 absolute top-20 left-8 border-l-2">
+
+                    <h1 class="ml-3 lg:text-4xl">Kaithi</h1>
+                    <p class="text-xs ml-3 filter drop-shadow-lg sm:w-1/2">Dilli, an ex-convict, endeavours
+                        to meet his daughter for the first time after leaving prison. However, his attempts are
+                        interrupted due to a drug raid planned by Inspector Bejoy.</p>
+                    <a href="https://www.youtube.com/watch?v=g79CvhHaj5I" target="_blank"
+                        class="px-5 py-1 bg-red-600 text-xs absolute mt-2.5 filter drop-shadow-lg ml-3 lg:text-base hover:bg-red-700 transform transition hover:-translate-y-0.5">Watch
+                        Trailer</a>
+                </div>
+                </header>
+
+                <main class="bg-black">
+
+                    <section class="ml-8 py-10 ">
+                        <h1>Theatres</h1>
+                        <div
+                            class="w-7/12 py-4 grid grid-cols-2 place-items-center mt-3 border border-gray-200 border-opacity-20 lg:w-1/3">
+                            <button>Fun Cinemas</button>
+                            <button>Brookefields</button>
+                            <button class="text-gray-600 mt-2">K.G Cinemas</button>
+                            <button class="text-gray-600 mt-2">Prozone</button>
+                        </div>
+                    </section>
+
+                    <section class="ml-8">
+                        <h1>Showtimes</h1>
+                        <div
+                            class="py-4 w-7/12 grid grid-cols-3 place-items-center mt-3 border border-gray-200 border-opacity-20 lg:w-1/3">
+                            <button class="text-green-500">4:15 pm</button>
+                            <button class="text-green-500">4:30 pm</button>
+                            <button class="text-yellow-400">4:45 pm</button>
+                            <button class="text-yellow-400 mt-2">5:00 pm</button>
+                            <button class="text-gray-600 mt-2">5:15 pm</button>
+                            <button class="text-gray-600 mt-2">5:30 pm</button>
+                        </div>
+                        <div class="mt-5">
+                            <p class="inline-block">Available<span class=" ml-2 p-all bg-green-500"></span></p>
+                            <p class="inline-block ml-3">Filling Fast<span class="ml-3 p-all bg-yellow-400"></span></p>
+                            <p class="inline-block ml-3">Sold<span class="ml-3 p-all bg-gray-600"></span></p>
+                        </div>
+                    </section>
+
+                    <section class="ml-8 py-10">
+                        <h1>No of seats</h1>
+                        <div class="mt-3">
+                            <button class="focus:bg-red-600 px-2 rounded">1</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">2</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">3</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">4</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">5</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">6</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">7</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">8</button>
+                            <button class="pl-2 focus:bg-red-600 px-2 rounded">9</button>
+                        </div>
+                    </section>
+
+                    <section class="ml-3">
+                        <h1 class=" ml-5">Food and Beverages</h1>
+                        <div class="grid grid-cols-2 mt-5 ml-5 md:grid-cols-4">
+
+                            <div class="relative">
+                                <a href="#"><img src="./images/popcorn.jpg" alt="Movie image"
+                                        class="border border-black hover:border-white h-48 w-9/12 object-fill rounded shadow-inner lg:h-56 lg:w-1/2"></a>
+                                <p class="mt-1">Popcorn</p>
+                                <p class="text-xs">110 Rs</p>
+                            </div>
+
+                            <div class="">
+                                <img src="./images/nachos.jpg" alt="Movie image"
+                                    class="border border-black hover:border-white h-48 w-9/12 rounded shadow-inner object-fill lg:h-56 lg:w-1/2">
+                                <p class="mt-1">Nachos</p>
+                                <p class="text-xs">150 Rs</p>
+                            </div>
+
+                            <div class="mt-5 md:mt-0">
+                                <a href="#"><img src="./images/chikenpuffs.jpg" alt="Movie image"
+                                        class="border border-black hover:border-white rounded h-48 w-9/12 object-fill lg:h-56 lg:w-1/2">
+                                    <p class="mt-1">Chicken puff</p>
+                                    <p class="text-xs">180 Rs</p>
+                                </a>
+                            </div>
+
+                            <div class="mt-5 md:mt-0">
+                                <img src="./images/pepsi.jpg" alt="Movie image"
+                                    class="border border-black hover:border-white rounded h-48 lg:h-56 lg:w-1/2 w-9/12 object-fill">
+                                <p class="mt-1">Pepsi</p>
+                                <p class="text-xs">90 Rs</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="ml-8 py-10">
+                        <h1>Total price</h1>
+                        <div
+                            class="w-7/12 md:w-1/3 py-3 grid grid-cols-2 place-items-center mt-3 border border-gray-200 border-opacity-20">
+                            <p>Tickets</p>
+                            <p>450</p>
+                            <p>Food</p>
+                            <p>150</p>
+                            <p>Total</p>
+                            <p>600</p>
+                        </div>
+                        <a href="#" class="px-5 py-1 bg-red-600 block mt-6 w-24 hover:bg-red-700">Payment</a>
+                    </section>
+                </main>
+            </div>
+        </section>
+        <!--Modal ends-->
+    </main>
+
+    <footer class="h-auto py-10 bg-gray-900 bg-opacity-50 grid grid-cols-1 place-items-center md:grid-cols-3">
+        <div class="flex py-10">
+            <input type="text" placeholder="Enter Email" class="pl-2 h-10 rounded-l text-black">
+            <button type="submit" class="bg-red-600 px-2 h-10 rounded-r shadow-2xl">Get updates</button>
+        </div>
+        <h1 class="text-2xl md:text-3xl text-red-all py-10 ">Movie<span class="text-white">Junkie</span></h1>
+        <div class="py-10">
+            <p class="text-2xl">Follow us
+                <img src="./images/social-media.png" alt="altimage" class="h-10 w-10 inline-block">
+            </p>
+            <div class="mt-2">
+                <a href="#"><img src="./images/insta.png" alt="instaimage" class="w-6 h-6 inline-block"></a>
+                <a href="#"><img src="./images/face.png" alt="instaimage" class="w-6 h-6 inline-block ml-2"></a>
+                <a href="#"><img src="./images/twitter (2).png" alt="instaimage" class="w-6 h-6 inline-block ml-2"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="movie.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
